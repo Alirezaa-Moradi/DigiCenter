@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "name": "mobile",
+      "id": "1",
+      "price": 12000000
+    },
+    {
+      "name": "pc",
+      "id": "2",
+      "price": 42000000
+    },
+    {
+      "name": "laptop",
+      "id": "3",
+      "price": 28000000
+    },
+    {
+      "id": 1726519498253,
+      "name": "mobile1",
+      "price": 20000000
+    }
+  ]
+}
