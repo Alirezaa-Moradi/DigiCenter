@@ -1,4 +1,3 @@
-import axios from "axios";
 import Axios from "./instance";
 
 export const Get = async (url, params = {}) => {
