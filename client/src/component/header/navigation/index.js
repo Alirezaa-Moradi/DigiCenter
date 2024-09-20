@@ -6,7 +6,7 @@ const Navigation = () => {
   return (
     <StyledNavigation>
       <Row>
-        <Col>Navigation</Col>
+        <Col>نویگیشن</Col>
       </Row>
     </StyledNavigation>
   );
