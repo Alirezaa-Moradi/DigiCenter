@@ -9,13 +9,13 @@ const Header = () => {
   return (
     <StyledHeader>
       <Row>
-        <Col>
+        <Col span={18}>
           <Navigation />
           <TopMenu />
         </Col>
         <Col>
           <div className="LogoBox">
-            <Logo className="LogoIcon"/>
+            <Logo className="LogoIcon" />
           </div>
         </Col>
       </Row>
