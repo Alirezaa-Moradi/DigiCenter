@@ -1,0 +1,35 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg
+    id="TABLET"
+    width="800px"
+    height="800px"
+    viewBox="-7 0 64 64"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    fill="#656565">
+
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g id="SVGRepo_iconCarrier">
+    <title>Tablet</title>
+    <desc>Created with Sketch.</desc>
+    <defs> </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" >
+        <g id="Tablet" transform="translate(1.000000, 1.000000)" stroke="#656565" stroke-width="2">
+            <path d="M48,60 C48,61.1 47.1,62 46,62 L2,62 C0.9,62 0,61.1 0,60 L0,2 C0,0.9 0.9,0 2,0 L46,0 C47.1,0 48,0.9 48,2 L48,60 L48,60 Z" id="Shape" > </path>
+            <path d="M42,50 C42,51.1 41.1,52 40.1,52 L8,52 C6.9,52 6.1,51.1 6.1,50 L6.1,9 C6.1,7.9 7,7 8,7 L40,7 C41.1,7 41.9,7.9 41.9,9 L41.9,50 L42,50 Z" id="Shape" > </path>
+            <path d="M17.5,10 L11.5,16" id="Shape" > </path>
+            <path d="M23.5,11 L11,23.5" id="Shape" > </path>
+            <path d="M22,4 L26,4" id="Shape" > </path>
+            <circle id="Oval"  cx="24" cy="57" r="3">
+            </circle>
+        </g>
+    </g>
+</g>
+
+</svg>

@@ -25,7 +25,7 @@ export const StyledTopMenu = Styled.div`
         list-style-type: none;
         flex-direction: row-reverse;
     }
-
+    
     .topMenu-li-item{
         display: flex;
         line-height: 34px;
@@ -62,9 +62,9 @@ export const StyledTopMenu = Styled.div`
             position: absolute;
     }
 
-    .topMenu-li-item-visibility:hover .topMenu-visibility-box{
+    .topMenu-li-item-visibility:hover ~ .topMenu-visibility-box{
         background: red;
-        /* visibility: visible !important; */
+        visibility: visible !important;
     }
 
     .topMenu-li-text{

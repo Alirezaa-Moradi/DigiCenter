@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 
 export const StyledHeader = Styled.div`
-    /* background-color: aliceblue; */
+    background-color: aliceblue;
 
     .ant-row{
         justify-content: center;

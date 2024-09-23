@@ -26,10 +26,10 @@ const TopMenu = () => {
                 <li className="topMenu-li-item topMenu-li-item-visibility">
                   <span className="topMenu-li-text">دسته بندی ها</span>
                   <Category2 className="topMenu-li-icon" />
-                  <div className="topMenu-visibility-box">
-                    <MegaMenu className="topMenu-li-icon" />
-                  </div>
                 </li>
+                <div className="topMenu-visibility-box">
+                  <MegaMenu className="topMenu-li-icon" />
+                </div>
                 <Vertical_Line className="topMenu-line-icon" />
                 <li className="topMenu-li-item">
                   <Link className="topMenu-li-link">
