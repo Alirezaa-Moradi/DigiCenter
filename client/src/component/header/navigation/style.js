@@ -112,7 +112,7 @@ export const StyledNavigation = Styled.div`
 
     .navigation-search-input{
         width: 100%;
-        margin: 8px 0;
+        margin: 10px 0;
         height: 44px;
     }
 

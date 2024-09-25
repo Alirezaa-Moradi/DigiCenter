@@ -13,6 +13,17 @@ import {
 import { ReactComponent as Vertical_Line } from "../../../assets/images/Vertical_Line.svg";
 
 const TopMenu = () => {
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
+
+  // نمایش و مخفی‌سازی مگامنو
+  const handleMouseEnter = () => {
+    setShowMegaMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowMegaMenu(false);
+  };
+
   return (
     <StyledTopMenu>
       <Row className="topMenu-root">
@@ -20,49 +31,47 @@ const TopMenu = () => {
           <div></div>
         </Col>
         <Col span={18}>
-          <div className="topMenu-list-box">
-            <nav className="topMenu-list-nav">
-              <ul className="topMenu-ul-list">
-                <li className="topMenu-li-item topMenu-li-item-visibility">
-                  <span className="topMenu-li-text">دسته بندی ها</span>
-                  <Category2 className="topMenu-li-icon" />
-                </li>
-                <div className="topMenu-visibility-box">
-                  <MegaMenu className="topMenu-li-icon" />
-                </div>
-                <Vertical_Line className="topMenu-line-icon" />
-                <li className="topMenu-li-item">
-                  <Link className="topMenu-li-link">
-                    <span className="topMenu-li-text">شگفت انگیز</span>
-                    <PercentageSquare className="topMenu-li-icon" />
-                  </Link>
-                </li>
-                <Vertical_Line className="topMenu-line-icon" />
-                <li className="topMenu-li-item">
-                  <Link className="topMenu-li-link">
-                    <span className="topMenu-li-text">پر فروش ترین ها</span>
-                    <Medal className="topMenu-li-icon" />
-                  </Link>
-                </li>
-                <Vertical_Line className="topMenu-line-icon" />
-                <li className="topMenu-li-item">
-                  <Link className="topMenu-li-link">
-                    <span className="topMenu-li-text">
-                      تخفیف ها و پیشنهاد ها
-                    </span>
-                    <ReceiptDiscount className="topMenu-li-icon" />
-                  </Link>
-                </li>
-                <Vertical_Line className="topMenu-line-icon" />
-                <li className="topMenu-li-item">
-                  <Link className="topMenu-li-link">
-                    <span className="topMenu-li-text">وبلاگ</span>
-                    <DocumentText1 className="topMenu-li-icon" />
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <nav className="navbar">
+            <ul className="menu-list">
+              <li
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                className="topMenu-li-item"
+              >
+                <span className="topMenu-li-text">دسته بندی ها</span>
+                <Category2 className="topMenu-li-icon" />
+                {showMegaMenu && <MegaMenu />}
+              </li>
+              <Vertical_Line className="topMenu-line-icon" />
+              <li className="topMenu-li-item">
+                <Link className="topMenu-li-link">
+                  <span className="topMenu-li-text">شگفت انگیز</span>
+                  <PercentageSquare className="topMenu-li-icon" />
+                </Link>
+              </li>
+              <Vertical_Line className="topMenu-line-icon" />
+              <li className="topMenu-li-item">
+                <Link className="topMenu-li-link">
+                  <span className="topMenu-li-text">پر فروش ترین ها</span>
+                  <Medal className="topMenu-li-icon" />
+                </Link>
+              </li>
+              <Vertical_Line className="topMenu-line-icon" />
+              <li className="topMenu-li-item">
+                <Link className="topMenu-li-link">
+                  <span className="topMenu-li-text">تخفیف ها و پیشنهاد ها</span>
+                  <ReceiptDiscount className="topMenu-li-icon" />
+                </Link>
+              </li>
+              <Vertical_Line className="topMenu-line-icon" />
+              <li className="topMenu-li-item">
+                <Link className="topMenu-li-link">
+                  <span className="topMenu-li-text">وبلاگ</span>
+                  <DocumentText1 className="topMenu-li-icon" />
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </Col>
       </Row>
     </StyledTopMenu>
