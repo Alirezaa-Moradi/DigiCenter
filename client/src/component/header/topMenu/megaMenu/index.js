@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { StyledMegaMenu } from "./style";
-import { ArrowLeft2 } from "iconsax-react";
+import { ReactComponent as ArrowIcon } from "../../../../assets/images/ArrowIcon.svg";
 import { ReactComponent as MobileIcon } from "../../../../assets/images/MobileIcon.svg";
 import { ReactComponent as TabletIcon } from "../../../../assets/images/TabletIcon.svg";
 import { ReactComponent as LaptopIcon } from "../../../../assets/images/LaptopIcon.svg";
-import { Col, Row } from "antd";
-import { Link } from "react-router-dom";
 
 const mobileListData = [
   { title: "گوشی اپل", addres: "/" },
@@ -62,29 +61,26 @@ const laptopListData = [
 const categoryList = [
   {
     name: "موبایل",
-    icon: <MobileIcon className="megaMenu-li-icon" />,
     datas: mobileListData,
-    titleAll: "قیمت گوشی",
-    subTitleAll: "(همه محصولات)",
+    titleAllItems: "همه محصولات موبایل",
+    icon: <MobileIcon className="megaMenu-li-icon" />,
   },
   {
     name: "تبلت",
-    icon: <TabletIcon className="megaMenu-li-icon" />,
     datas: tabletListData,
-    titleAll: "قیمت تبلت",
-    subTitleAll: "(همه محصولات)",
+    titleAllItems: "همه محصولات تبلت",
+    icon: <TabletIcon className="megaMenu-li-icon" />,
   },
   {
     name: "لپ‌تاپ‌",
-    icon: <LaptopIcon className="megaMenu-li-icon" />,
     datas: laptopListData,
-    titleAll: "قیمت لپ‌تاپ‌",
-    subTitleAll: "(همه محصولات)",
+    titleAllItems: "همه محصولات لپ‌تاپ‌",
+    icon: <LaptopIcon className="megaMenu-li-icon" />,
   },
 ];
 
 const MegaMenu = () => {
-  const [activeSubMenu, setActiveSubMenu] = useState("موبایل"); // آیتم پیش‌فرض فعال
+  const [activeSubMenu, setActiveSubMenu] = useState("موبایل");
 
   const handleSubMenuEnter = (menu) => {
     setActiveSubMenu(menu);
@@ -92,62 +88,19 @@ const MegaMenu = () => {
 
   return (
     <StyledMegaMenu>
-      {/* <div className="megaMenu-list-box">
-        <nav className="megaMenu-list-nav">
-          <ul className="megaMenu-ul-list">
-            {categoryList.map((data) => {
-              return (
-                <li key={data.name} className="megaMenu-li-item">
-                  <div className="megaMenu-li-textBox">
-                    <span className="megaMenu-li-text">{data.name}</span>
-                    {data.icon}
-                    <nav className="megaMenu-subMenu-nav">
-                                              <li className="megaMenu-subMenu-li-header">
-                                                <Link className="megaMenu-subMenu-link">
-                                                  <span className="megaMenu-subMenu-title">
-                                                    {data.titleAll}
-                                                  </span>
-                                                  <span className="megaMenu-subMenu-subTitle">
-                                                    {data.subTitleAll}
-                                                  </span>
-                                                  <ArrowLeft2 className="megaMenu-subMenu-li-ArrowIcon"/>
-                                                </Link>
-                                              </li>
-                                              <ul className="megaMenu-subMenu-ul">
-                                                {data?.datas?.map((name) => {
-                                                  return (
-                                                    <li className="megaMenu-subMenu-li">
-                                                      <Link className="megaMenu-subMenu-link">
-                                                        <span className="megaMenu-subMenu-text">
-                                                          {name.title}
-                                                        </span>
-                                                      </Link>
-                                                    </li>
-                                                  );
-                                                })}
-                                              </ul>
-                    </nav>
-                  </div>
-                  <ArrowLeft2 className="megaMenu-li-ArrowIcon" />
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </div> */}
-
       <ul className="category-list">
         {categoryList?.map((data) => {
           return (
             <li
               onMouseEnter={() => handleSubMenuEnter(data.name)}
-              className={activeSubMenu === data.name ? "active" : ""}
+              // className={activeSubMenu === data.name ? "active" : ""}
+              className="megaMenu-category-list-li"
             >
               <div className="megaMenu-li-textBox">
                 <span className="megaMenu-li-text">{data.name}</span>
                 {data.icon}
               </div>
-              <ArrowLeft2 className="megaMenu-li-ArrowIcon" />
+              <ArrowIcon className="megaMenu-li-ArrowIcon" />
             </li>
           );
         })}
@@ -160,12 +113,9 @@ const MegaMenu = () => {
                 <li className="megaMenu-subMenu-li-header">
                   <Link className="megaMenu-subMenu-link">
                     <span className="megaMenu-subMenu-title">
-                      {data.titleAll}
+                      {data.titleAllItems}
                     </span>
-                    <span className="megaMenu-subMenu-subTitle">
-                      {data.subTitleAll}
-                    </span>
-                    <ArrowLeft2 className="megaMenu-subMenu-li-ArrowIcon" />
+                    <ArrowIcon className="megaMenu-subMenu-li-ArrowIcon" />
                   </Link>
                 </li>
                 <ul key={data.name} className="megaMenu-subMenu-ul">

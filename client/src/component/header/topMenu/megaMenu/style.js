@@ -3,71 +3,78 @@ import Styled from "styled-components";
 export const StyledMegaMenu = Styled.div`
     
     right: 0;
+    cursor: auto;
     background-color: white;
-    top: 52px;
+    top: 46px;
     display: flex;
-    padding: 20px;
+    /* padding: 20px; */
     z-index: 99999999;
     position: absolute;
+    border-radius: 12px;
     flex-direction: row-reverse;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-delay: .1s;
+    transform: translateX(-20px);
+    transition: all ease-in-out .3s;
 
     .category-list {
-        list-style: none;
-        /* width: 150px; */
-        padding-left: 20px;
-        border-left: 1px solid #ccc;
-        padding-right: 0px;
-        border-right: unset;
         display: flex;
+        list-style: none;
+        padding: 10px;
+        padding-left: 20px;
         flex-direction: column;
+        border-radius: 0px 10px 10px 0px;
+        background-color: #F7F7F7;
     }
 
     .category-list > li {
         padding: 16px 12px 16px;
-        cursor: pointer;
-        width: 200px;
+        width: 146px;
         display: flex;
-        cursor: pointer;
+        cursor: default;
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-
-    .category-list > li.active {
-        font-weight: bold;
-        color: #007bff;
+    
+    .megaMenu-category-list-li:hover{
+        .megaMenu-li-text{
+            font-weight: bold;
+            color: #FF4748;
+        }
+        .megaMenu-li-textBox > svg{
+            fill: #FF4748;
+        }
+        .megaMenu-li-ArrowIcon{
+            fill: #FF4748;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+            transition-delay: 0s;
+            transform: translateX(0);
+        }
     }
 
     .sub-menu-content {
-        margin-right: 20px;
         flex-grow: 1;
+        padding: 20px;
+        margin-right: 20px;
     }
 
     .sub-menu-content ul {
         list-style: none;
     }
 
-.sub-menu-content li {
-  padding: 5px 0;
-  cursor: pointer;
-}
+    .sub-menu-content li {
+        padding: 5px 0;
+    }
 
-.sub-menu-content li:hover {
-  color: #007bff;
-}
-
-
-
-
-
-
-
-
-
-
-
+    .sub-menu-content li:hover {
+        color: #007bff;
+    }
 
     .MegaMenu-root{
         margin: 25px 20px 0 0; 
@@ -91,22 +98,20 @@ export const StyledMegaMenu = Styled.div`
         padding: 0;
         display: flex;
         overflow: hidden;
+        font-weight: 400;
         padding: 42px 0px;
         align-items: center;
         list-style-type: none;
         flex-direction: column;
-        background-color: rgb(255 255 255);
-        /* background-color: whitesmoke; */
         box-sizing: border-box;
-        font-weight: 400;
+        background-color: rgb(255 255 255);
         -webkit-tap-highlight-color: transparent;
     }
     
     .megaMenu-li-item{
         width: 236px;
         display: flex;
-        cursor: pointer;
-        /* position: relative; */
+        /* cursor: pointer; */
         align-items: center;
         padding: 0 32px 32px;
         flex-direction: row-reverse;
@@ -123,64 +128,66 @@ export const StyledMegaMenu = Styled.div`
     }
 
     .megaMenu-li-text{
-        vertical-align: baseline;
         color: #929292;
+        vertical-align: baseline;
     }
 
     .megaMenu-li-icon{
-        width: 36px;
-        height: 36px;
-        padding-left: 10px;
+        width: 38px;
+        height: 38px;
+        padding-left: 4px;
+        margin-top: -7px;
+        fill :#929292;
     }
 
     .megaMenu-li-ArrowIcon{
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 9px;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition-delay: .1s;
+        transform: translateX(20px);
+        transition: all ease-in-out .3s;
     }
 
     .megaMenu-subMenu-nav{
-        position: absolute;
-        background-color: yellow;
         top: 0;
+        z-index: 1;
         right: 300px;
         display: none;
-        /* display: block; */
+        position: absolute;
         visibility: hidden;
-        z-index: 1;
+        background-color: yellow;
         padding: 32px 16px 32px 0;
     }
 
     .megaMenu-subMenu-ul{
         margin: 0;
         padding: 0;
+        gap: 0 5px;
         display: flex;
+        height: 400px;
         overflow: hidden;
+        width: max-content;
         align-items: center;
         list-style-type: none;
         flex-direction: column;
         flex-wrap: wrap-reverse;
-        height: 416px;
-        width: max-content
     }
 
     .megaMenu-subMenu-li{
-        width: 200px;
+        width: 180px;
         height: 22px;
         padding-top: 2px;
         text-align: right;
         margin-bottom: 8px;
-        /* line-height: 24.5px; */
     }
-
-    /* .megaMenu-li-item:hover .megaMenu-subMenu-nav {
-        display: block;
-        visibility: visible;
-    } */
 
     .megaMenu-subMenu-li-header{
         display: flex;
-        flex-direction: row-reverse;
         margin-bottom: 12px;
+        flex-direction: row-reverse;
     }
     
     .megaMenu-subMenu-link{
@@ -194,8 +201,9 @@ export const StyledMegaMenu = Styled.div`
     }
 
     .megaMenu-subMenu-title{
-        font-size: 14px;
-        font-weight: 700;
+        font-size: 12px;
+        font-weight: 500;
+        color: #50a0bf;
     }
 
     .megaMenu-subMenu-subTitle{
@@ -204,10 +212,27 @@ export const StyledMegaMenu = Styled.div`
     }
 
     .megaMenu-subMenu-li-ArrowIcon{
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 9px;
         padding-right: 2px;
         padding-bottom: 2px;
+        color: #008eb2;
+        fill: #50a0bf;
+    }
+
+    .megaMenu-subMenu-link:hover{
+        .megaMenu-subMenu-title{
+            color: #008eb2;
+        }
+        .megaMenu-subMenu-li-ArrowIcon{
+            fill: #008eb2;
+        }
+    }
+
+    .megaMenu-subMenu-li:hover{
+        .megaMenu-subMenu-link{
+            color: black;
+        }
     }
 
 `;
