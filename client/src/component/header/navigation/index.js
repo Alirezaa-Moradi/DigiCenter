@@ -1,54 +1,28 @@
 import React from "react";
 import { Col, Row, Select } from "antd";
 import { Link } from "react-router-dom";
-import { Headphone, SearchNormal1 } from "iconsax-react";
 import { StyledNavigation } from "./style";
+import { BagHappy, SearchNormal1 } from "iconsax-react";
+import { ReactComponent as Vertical_Line } from "../../../assets/images/Vertical_Line.svg";
 
 const Navigation = () => {
   return (
     <StyledNavigation>
       <Row className="navigation-root">
         <Col span={15} className="navigation-contactUs-container">
-          <div className="navigation-contactUs-Box">
-            <div className="navigation-phoneNumber-box">
-              <div className="navigation-phoneNumber-text-box">
-                <Link className="navigation-phoneNumber-link">
-                  <span className="navigation-phoneNumber-text-1">021</span>
-                  <span className="navigation-phoneNumber-text-2">
-                    -2587414
-                  </span>
-                </Link>
+          <div className="topMenu-loginBag-box">
+            <Link className="topMenu-login-link">
+              <span className="topMenu-login-text1">ثبت نام</span>
+              <Vertical_Line className="topMenu-login-text2" />
+              <span className="topMenu-login-text3">ورود</span>
+            </Link>
+            <Vertical_Line className="topMenu-line-icon" />
+            <Link className="topMenu-bag-link">
+              <BagHappy className="topMenu-bag-icon" />
+              <div className="topMenu-bag-cuntBox">
+                <span className="topMenu-bag-cunt">99</span>
               </div>
-              <div className="navigation-phoneNumber-icon-box">
-                <Headphone className="navigation-phoneNumber-icon" />
-              </div>
-            </div>
-            {/* <div className="navigation-title-box">
-              <p className="navigation-title-heading">
-                همین حالا با پشتیبانی ما تماس بگیر
-              </p>
-            </div> */}
-            <div className="navigation-list-box">
-              <nav className="navigation-list-nav">
-                <ul className="navigation-ul-list">
-                  <li className="navigation-li-item">
-                    <Link className="navigation-li-link">قوانین</Link>
-                  </li>
-                  <li className="navigation-li-item">
-                    <Link className="navigation-li-link">سوالات متداول</Link>
-                  </li>
-                  <li className="navigation-li-item">
-                    <Link className="navigation-li-link">شیوه پرداخت</Link>
-                  </li>
-                  <li className="navigation-li-item">
-                    <Link className="navigation-li-link">درباره ما</Link>
-                  </li>
-                  <li className="navigation-li-item">
-                    <Link className="navigation-li-link">تماس با ما</Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            </Link>
           </div>
         </Col>
         <Col span={9} className="navigation-search-container">

@@ -34,7 +34,7 @@ export const StyledMegaMenu = Styled.div`
         padding: 16px 12px 16px;
         width: 146px;
         display: flex;
-        cursor: default;
+        cursor: pointer;
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -45,7 +45,7 @@ export const StyledMegaMenu = Styled.div`
             font-weight: bold;
             color: #FF4748;
         }
-        .megaMenu-li-textBox > svg{
+        .megaMenu-li-LinkBox > svg{
             fill: #FF4748;
         }
         .megaMenu-li-ArrowIcon{
@@ -111,7 +111,6 @@ export const StyledMegaMenu = Styled.div`
     .megaMenu-li-item{
         width: 236px;
         display: flex;
-        /* cursor: pointer; */
         align-items: center;
         padding: 0 32px 32px;
         flex-direction: row-reverse;
@@ -122,7 +121,7 @@ export const StyledMegaMenu = Styled.div`
         padding-bottom: 0 !important;
     }
 
-    .megaMenu-li-textBox{
+    .megaMenu-li-LinkBox{
         display: flex;
         align-items: center;
     }

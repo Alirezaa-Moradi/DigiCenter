@@ -93,13 +93,12 @@ const MegaMenu = () => {
           return (
             <li
               onMouseEnter={() => handleSubMenuEnter(data.name)}
-              // className={activeSubMenu === data.name ? "active" : ""}
               className="megaMenu-category-list-li"
             >
-              <div className="megaMenu-li-textBox">
+              <Link className="megaMenu-li-LinkBox">
                 <span className="megaMenu-li-text">{data.name}</span>
                 {data.icon}
-              </div>
+              </Link>
               <ArrowIcon className="megaMenu-li-ArrowIcon" />
             </li>
           );

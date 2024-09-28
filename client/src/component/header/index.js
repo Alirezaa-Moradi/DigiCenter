@@ -1,9 +1,10 @@
 import React from "react";
-import { Col, Row } from "antd";
-import Navigation from "./navigation";
-import { StyledHeader } from "./style";
-import { ReactComponent as Logo } from "../../assets/images/Logo.svg";
 import TopMenu from "./topMenu";
+import Navigation from "./navigation";
+import { Col, Image, Row } from "antd";
+import { StyledHeader } from "./style";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/Logo.png";
 
 const Header = () => {
   return (
@@ -15,7 +16,9 @@ const Header = () => {
         </Col>
         <Col>
           <div className="LogoBox">
-            <Logo className="LogoIcon" />
+            <Link>
+              <Image preview={false} src={logo} />
+            </Link>
           </div>
         </Col>
       </Row>

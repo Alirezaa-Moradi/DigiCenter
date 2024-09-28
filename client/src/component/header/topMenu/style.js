@@ -7,74 +7,6 @@ export const StyledTopMenu = Styled.div`
         justify-content: space-between !important;
     }
 
-    .topMenu-loginBag-box{
-        gap: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: left;
-    }
-
-    .topMenu-login-link{
-        height: 36px;
-        display: flex;
-        cursor: pointer;
-        padding-left: 20px;
-        align-items: center;
-        padding-right: 18px;
-        border-radius: 0.5rem;
-        background-color: #FF4748;
-        /* border: 1px solid #C9C9C9; */
-    }
-
-    .topMenu-login-text1{
-        font-size: 14px;
-        color: #fff;
-        font-weight: 500;
-        padding-right: 16px;
-        white-space: nowrap;
-    }
-
-    .topMenu-login-text2{
-        font-size: 14px;
-        color: #fff;
-        font-weight: 500;
-        border-left: 1px solid #fff;
-        padding-left: 16px;
-    }
-
-    .topMenu-bag-link{
-        padding: 6px;
-        display: flex;
-        cursor: pointer;
-        position: relative;
-        align-items: center;
-        border-radius: 0.5rem;
-        border: 1px solid #FF4748;
-    }
-
-    .topMenu-bag-icon{
-        width: 22px;
-        height: 22px;
-        color : #FF4748;
-    }
-
-    .topMenu-bag-cuntBox{
-        top: -12px;
-        width: 18px;
-        height: 18px;
-        right: -11px;
-        padding: 2px;
-        border-radius: 50%;
-        position: absolute;
-        background-color: #FF4748;
-    }
-    
-    .topMenu-bag-cunt{
-        color : #fff;
-        font-size: 12px;
-        font-weight: 500;
-    }
-
     .navbar {
         display: flex;
         position: relative;
@@ -136,6 +68,7 @@ export const StyledTopMenu = Styled.div`
     .topMenu-li-text{
         border: none;
         color: #656565;
+        font-size: 14px;
         vertical-align: baseline;
         transition: all ease-in-out .3s;
     }
@@ -150,6 +83,15 @@ export const StyledTopMenu = Styled.div`
         background-color: #FF4748;
         transition: all ease-in-out .3s;
     }
+
+    .topMenu-li-ArrowIcon{
+        width: 10px;
+        height: 9px;
+        fill: #656565;
+        margin: 0 6px 1px 0;
+        transform: rotate(-90deg);
+        transition: all ease-in-out .3s;
+    }
         
     .topMenu-li-item:hover{
         padding: 13px 16px;
@@ -162,6 +104,10 @@ export const StyledTopMenu = Styled.div`
         }
         & .topMenu-li-text{
             color: #FF4748;
+        }
+        & .topMenu-li-ArrowIcon{
+            fill: #FF4748;
+            transform: rotate(90deg);
         }
     }
 

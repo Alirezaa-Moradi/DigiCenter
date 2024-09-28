@@ -6,6 +6,94 @@ export const StyledNavigation = Styled.div`
         border-bottom: 1px solid #C9C9C9;
     }
 
+    .topMenu-loginBag-box{
+        gap: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .topMenu-login-link{
+        /* gap: 16px; */
+        height: 40px;
+        display: flex;
+        cursor: pointer;
+        padding-left: 20px;
+        align-items: center;
+        padding-right: 18px;
+        border-radius: 6px;
+        background-color: #FF4748;
+        transition: all ease-in-out .3s;
+        /* border: 1px solid #C9C9C9; */
+    }
+
+    .topMenu-loginBag-box:hover .topMenu-login-link{
+        background-color: #f43c40;
+    }
+
+    .topMenu-login-text1{
+        font-size: 14px;
+        color: #fff;
+        font-weight: 500;
+        /* padding-right: 16px; */
+        white-space: nowrap;
+    }
+
+    .topMenu-login-text2{
+        fill: #fff;
+        width: 26px;
+        height: 26px;
+        margin-top: 2px;
+        transform: rotate(25deg);
+    }
+
+    .topMenu-login-text3{
+        font-size: 14px;
+        color: #fff;
+        font-weight: 500;
+        /* border-left: 1px solid #fff; */
+        /* padding-left: 16px; */
+    }
+
+    .topMenu-line-icon{
+        width: 28px;
+        height: 28px;
+        fill: #C9C9C9;
+    } 
+
+    .topMenu-bag-link{
+        padding: 7px;
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid #656565;
+    }
+
+    .topMenu-bag-icon{
+        width: 24px;
+        height: 24px;
+        color : #656565;
+    }
+
+    .topMenu-bag-cuntBox{
+        top: -10px;
+        width: 18px;
+        height: 18px;
+        right: -10px;
+        padding: 2px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #FF4748;
+    }
+    
+    .topMenu-bag-cunt{
+        color : #fff;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
     .navigation-list-box{
         display: flex;
         margin-right: 24px;
